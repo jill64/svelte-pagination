@@ -1,9 +1,15 @@
 <script lang="ts">
-  export let href: string
+  import inRange from 'lodash/inRange.js'
+
+  export let makeHref: (page: number) => string
   export let show: boolean
   export let label: string
+  export let page: number
+  export let last: number
+
+  $: hidden = show ? !inRange(page, 1, last + 1) : true
 </script>
 
-<a {href} class="paginate-navigation" hidden={show ? null : true}>
+<a href={makeHref(page)} class="paginate-navigation" {hidden}>
   {label}
 </a>
