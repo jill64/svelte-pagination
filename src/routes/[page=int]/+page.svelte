@@ -8,11 +8,11 @@
 
 <div>
   Last Page
-  <input type="number" bind:value={lastPage} />
+  <input type="number" placeholder="Last Page" bind:value={lastPage} />
   Center Size
-  <input type="number" bind:value={centerSize} />
+  <input type="number" placeholder="Center Size" bind:value={centerSize} />
   Side Size
-  <input type="number" bind:value={sideSize} />
+  <input type="number" placeholder="Side Size" bind:value={sideSize} />
 </div>
 <Paginate {lastPage} {centerSize} {sideSize} slug="[page=int]" />
 
