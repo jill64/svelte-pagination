@@ -1,5 +1,7 @@
 # svelte-pagination
 
+[Demo](https://jill64.github.io/svelte-pagination)
+
 Pagination component for Svelte
 
 ## Install
