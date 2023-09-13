@@ -13,6 +13,8 @@
   export let sideSize = 2
   export let centerSize = 3
   export let Class = ''
+  export let previousLabel = '＜ Previous'
+  export let nextLabel = 'Next ＞'
 
   $: routeId = $page.route.id
   $: key = slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
@@ -45,7 +47,7 @@
 >
   <Navigation
     show={remainLeft > 0}
-    label="＜ Previous"
+    label={previousLabel}
     page={current - 1}
     {last}
     {makeHref}
@@ -78,7 +80,7 @@
   {/each}
   <Navigation
     show={remainRight > 0}
-    label="Next ＞"
+    label={nextLabel}
     page={current + 1}
     {last}
     {makeHref}
