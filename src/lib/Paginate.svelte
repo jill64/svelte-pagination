@@ -43,7 +43,7 @@
   style:justify-content="center"
   style:align-items="center"
   style:container-type="inline-size"
-  class="pagenate-container {Class}"
+  class="paginate-container {Class}"
 >
   <Navigation
     show={remainLeft > 0}
