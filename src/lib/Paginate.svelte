@@ -27,14 +27,24 @@
   $: remainLeft = clamp(current - 1, 0, last - 1)
   $: remainRight = clamp(last - current, 0, last - 1)
 
+  $: baseDepth = base.match(/\//g)?.length ?? 0
+  $: pathArray = $page.url.pathname.split('/')
+  $: replaceIndex = routeId
+    ? routeId.split('/').indexOf(slug) + baseDepth
+    : null
+
   $: makeHref = (target: number) => {
-    if (!routeId) {
+    if (!replaceIndex) {
       return ''
     }
 
-    const pathname = routeId.replace(slug, target.toString())
+    const pathname = [
+      ...pathArray.slice(0, replaceIndex),
+      target.toString(),
+      ...pathArray.slice(replaceIndex + 1)
+    ].join('/')
 
-    return `${base}${pathname}${$page.url.search}${$page.url.hash}`
+    return `${pathname}${$page.url.search}${$page.url.hash}`
   }
 </script>
 
