@@ -57,8 +57,8 @@
   "dependencies": {
     "@sveltejs/kit": "1.25.1",
     "svelte": "4.2.1",
-    "@jill64/attempt": "^1.0.0",
-    "@types/lodash": "^4.14.198",
-    "lodash": "^4.17.21"
+    "@jill64/attempt": "1.0.6",
+    "@types/lodash": "4.14.199",
+    "lodash": "4.17.21"
   }
 }
