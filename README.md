@@ -1,5 +1,8 @@
 # svelte-pagination
 
+[![npm](https://img.shields.io/npm/v/%40jill64%2Fsvelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination)
+[![CI](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml)
+
 [Demo](https://jill64.github.io/svelte-pagination)
 
 Pagination component for Svelte
