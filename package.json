@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-pagination",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "type": "module",
   "description": "Pagination component for Svelte",
   "main": "dist/index.js",
@@ -59,7 +59,7 @@
   "dependencies": {
     "@sveltejs/kit": "1.25.2",
     "svelte": "4.2.1",
-    "@jill64/attempt": "1.0.12",
+    "@jill64/attempt": "1.0.13",
     "lodash": "4.17.21"
   }
 }
