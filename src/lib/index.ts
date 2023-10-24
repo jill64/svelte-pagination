@@ -1,2 +1,2 @@
 export { default as Paginate } from './Paginate.svelte'
-export { calcLastPage } from './calcLastPage.js'
+export { calcLastPage } from './utils/calcLastPage.js'

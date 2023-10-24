@@ -2,11 +2,11 @@
   import { base } from '$app/paths'
   import { page } from '$app/stores'
   import { attempt } from '@jill64/attempt'
-  import clamp from 'lodash/clamp.js'
+  import {clamp} from './utils/clamp.js'
   import Navigation from './Navigation.svelte'
   import PageLink from './PageLink.svelte'
   import RestIndicator from './RestIndicator.svelte'
-  import { natural } from './natural.js'
+  import { natural } from './utils/natural.js'
 
   export let lastPage: number
   export let slug: `[${string}]` | `[${string}=${string}]`
