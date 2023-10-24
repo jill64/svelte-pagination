@@ -2,7 +2,7 @@
   import { base } from '$app/paths'
   import { page } from '$app/stores'
   import { attempt } from '@jill64/attempt'
-  import {clamp} from './utils/clamp.js'
+  import { clamp } from './utils/clamp.js'
   import Navigation from './Navigation.svelte'
   import PageLink from './PageLink.svelte'
   import RestIndicator from './RestIndicator.svelte'
