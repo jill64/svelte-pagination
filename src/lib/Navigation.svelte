@@ -1,5 +1,5 @@
 <script lang="ts">
-  import inRange from 'lodash/inRange.js'
+  import { inRange } from './utils/inRange.js'
 
   export let makeHref: (page: number) => string
   export let show: boolean

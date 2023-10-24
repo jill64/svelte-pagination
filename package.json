@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-pagination",
-  "version": "0.1.26",
+  "version": "1.0.0",
   "type": "module",
   "description": "Pagination component for Svelte",
   "main": "dist/index.js",
@@ -36,8 +36,8 @@
     "package": "svelte-kit sync && npx @sveltejs/package && npx publint",
     "check": "svelte-kit sync && npx svelte-check",
     "format": "npx prettier --write . --plugin prettier-plugin-svelte .",
-    "lint": "npx prettier --check . --plugin prettier-plugin-svelte . && npx eslint && npm run check",
-    "test:e2e": "npx playwright install && playwright test"
+    "lint": "npx prettier --check . --plugin prettier-plugin-svelte . && npx eslint . && npm run check",
+    "test:e2e": "npx playwright install --with-deps && playwright test"
   },
   "peerDependencies": {
     "@sveltejs/kit": "^1.0.0",
@@ -52,15 +52,12 @@
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-svelte": "2.34.0",
     "prettier-plugin-svelte": "3.0.3",
-    "tslib": "2.6.2",
     "typescript": "5.2.2",
-    "@types/lodash": "4.14.200",
     "vite": "4.5.0"
   },
   "dependencies": {
     "@sveltejs/kit": "1.27.0",
     "svelte": "4.2.2",
-    "@jill64/attempt": "1.1.0",
-    "lodash": "4.17.21"
+    "@jill64/attempt": "1.1.0"
   }
 }
