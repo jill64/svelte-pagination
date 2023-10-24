@@ -1,4 +1,11 @@
 <!----- BEGIN GHOST DOCS HEADER ----->
+
+# svelte-pagination
+
+[![npm-version](https://img.shields.io/npm/v/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-license](https://img.shields.io/npm/l/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-download-month](https://img.shields.io/npm/dm/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-min-size](https://img.shields.io/bundlephobia/min/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![deploy.yml](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml)
+
+Pagination component for Svelte
+
 <!----- END GHOST DOCS HEADER ----->
 
 [Demo](https://jill64.github.io/svelte-pagination)
