@@ -5,6 +5,13 @@ test('side:2 center:3 last:10 (Default)', async ({ page }) => {
 
   await expect(page.locator('span').filter({ hasText: '1' })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '8', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '9', exact: true })).toBeVisible()
   await expect(
     page.getByRole('link', { name: '10', exact: true })
@@ -16,9 +23,20 @@ test('side:2 center:3 last:10 (Default)', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+
   await expect(page.getByRole('link', { name: '4', exact: true })).toBeVisible()
   await expect(page.locator('span').filter({ hasText: '5' })).toBeVisible()
   await expect(page.getByRole('link', { name: '6', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '7', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '8', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '9', exact: true })).toBeVisible()
   await expect(
     page.getByRole('link', { name: '10', exact: true })
@@ -30,6 +48,13 @@ test('side:2 center:3 last:10 (Default)', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '8', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '9', exact: true })).toBeVisible()
   await expect(page.locator('span').filter({ hasText: '10' })).toBeVisible()
 })
@@ -42,6 +67,15 @@ test('side:1 center:1 last:5', async ({ page }) => {
   await page.getByPlaceholder('Last Page').fill('5')
 
   await expect(page.locator('span').filter({ hasText: '1' })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '2', exact: true })
+  ).not.toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '5', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
@@ -54,6 +88,12 @@ test('side:1 center:1 last:5', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.locator('span').filter({ hasText: '2' })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '5', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
@@ -65,6 +105,15 @@ test('side:1 center:1 last:5', async ({ page }) => {
 
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '2', exact: true })
+  ).not.toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '3', exact: true })
+  ).not.toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
   await expect(page.locator('span').filter({ hasText: '5' })).toBeVisible()
 })
 
@@ -78,6 +127,13 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.locator('span').filter({ hasText: '1' })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '17', exact: true })
+  ).not.toBeVisible()
   await expect(
     page.getByRole('link', { name: '18', exact: true })
   ).toBeVisible()
@@ -104,6 +160,13 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.getByRole('link', { name: '6', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '7', exact: true })).toBeVisible()
   await expect(
+    page.getByRole('link', { name: '8', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '17', exact: true })
+  ).not.toBeVisible()
+  await expect(
     page.getByRole('link', { name: '18', exact: true })
   ).toBeVisible()
   await expect(
@@ -124,6 +187,13 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '7', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '8', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '9', exact: true })).toBeVisible()
   await expect(page.locator('span').filter({ hasText: '10' })).toBeVisible()
@@ -133,6 +203,13 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '12', exact: true })
   ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '13', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '17', exact: true })
+  ).not.toBeVisible()
   await expect(
     page.getByRole('link', { name: '18', exact: true })
   ).toBeVisible()
@@ -155,6 +232,13 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
   await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '12', exact: true })
+  ).not.toBeVisible()
+  await expect(
     page.getByRole('link', { name: '13', exact: true })
   ).toBeVisible()
   await expect(
@@ -176,6 +260,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '20', exact: true })
   ).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '21', exact: true })
+  ).not.toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
   await page.goto('/svelte-pagination/20')
@@ -189,10 +276,20 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
   await expect(
+    page.getByRole('link', { name: '4', exact: true })
+  ).not.toBeVisible()
+
+  await expect(
+    page.getByRole('link', { name: '17', exact: true })
+  ).not.toBeVisible()
+  await expect(
     page.getByRole('link', { name: '18', exact: true })
   ).toBeVisible()
   await expect(
     page.getByRole('link', { name: '19', exact: true })
   ).toBeVisible()
   await expect(page.locator('span').filter({ hasText: '20' })).toBeVisible()
+  await expect(
+    page.getByRole('link', { name: '21', exact: true })
+  ).not.toBeVisible()
 })
