@@ -7,7 +7,7 @@ export default defineConfig({
   },
   testDir: 'tests',
   fullyParallel: true,
-  workers: process.env.CI ? 1 : '100%',
+  workers: '100%',
   retries: process.env.CI ? 2 : 0,
   projects: [
     {
