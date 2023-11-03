@@ -2,7 +2,7 @@
   "name": "@jill64/svelte-pagination",
   "version": "1.0.2",
   "type": "module",
-  "description": "Pagination component for Svelte",
+  "description": "📖 Pagination component for Svelte",
   "main": "dist/index.js",
   "license": "MIT",
   "author": "jill64 <intents.turrets0h@icloud.com> (https://github.com/jill64)",
@@ -50,7 +50,7 @@
     "@typescript-eslint/parser": "6.9.1",
     "eslint-plugin-deprecation": "2.0.0",
     "eslint-config-prettier": "9.0.0",
-    "eslint-plugin-svelte": "2.34.0",
+    "eslint-plugin-svelte": "2.34.1",
     "prettier-plugin-svelte": "3.0.3",
     "typescript": "5.2.2",
     "vite": "4.5.0"
