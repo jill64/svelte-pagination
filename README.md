@@ -16,14 +16,6 @@ npm i @jill64/svelte-pagination
 
 <!----- END GHOST DOCS HEADER ----->
 
-[Demo](https://jill64.github.io/svelte-pagination)
-
-## Install
-
-```sh
-npm i -D @jill64/svelte-pagination
-```
-
 ## Quick Example
 
 ```svelte
