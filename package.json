@@ -2,7 +2,7 @@
   "name": "@jill64/svelte-pagination",
   "version": "1.0.2",
   "type": "module",
-  "description": "Pagination component for Svelte",
+  "description": "📖 Pagination component for Svelte",
   "main": "dist/index.js",
   "license": "MIT",
   "author": "jill64 <intents.turrets0h@icloud.com> (https://github.com/jill64)",
