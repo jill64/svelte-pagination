@@ -37,7 +37,7 @@
     "check": "svelte-kit sync && npx svelte-check",
     "format": "npx prettier --write . --plugin prettier-plugin-svelte .",
     "lint": "npx eslint . && npm run check",
-    "test": "npx playwright install --with-deps && playwright test"
+    "test": "playwright test"
   },
   "peerDependencies": {
     "@sveltejs/kit": "^1.0.0",
