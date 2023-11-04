@@ -2,11 +2,11 @@
 
 # svelte-pagination
 
-[![npm-version](https://img.shields.io/npm/v/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-license](https://img.shields.io/npm/l/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-download-month](https://img.shields.io/npm/dm/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-min-size](https://img.shields.io/bundlephobia/min/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![ci.yml](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml) [![deploy.yml](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml) [![github-pages](https://img.shields.io/website?up_message=working&down_message=down&url=https%3A%2F%2Fjill64.github.io%2Fsvelte-pagination%2F)](https://jill64.github.io/svelte-pagination/)
+[![npm-version](https://img.shields.io/npm/v/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-license](https://img.shields.io/npm/l/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-download-month](https://img.shields.io/npm/dm/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![npm-min-size](https://img.shields.io/bundlephobia/min/@jill64/svelte-pagination)](https://npmjs.com/package/@jill64/svelte-pagination) [![ci.yml](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/ci.yml) [![deploy.yml](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml/badge.svg)](https://github.com/jill64/svelte-pagination/actions/workflows/deploy.yml) [![stackblitz](https://img.shields.io/badge/StackBlitz-jill64--svelte--pagination-dodgerblue)](https://stackblitz.com/edit/jill64-svelte-pagination?file=src%2Froutes%2FDemo.svelte)
 
 📖 Pagination component for Svelte
 
-## [Demo](https://jill64.github.io/svelte-pagination/)
+## [Demo](https://stackblitz.com/edit/jill64-svelte-pagination?file=src%2Froutes%2FDemo.svelte)
 
 ## Install
 
