@@ -10,7 +10,8 @@
   "homepage": "https://github.com/jill64/svelte-pagination#readme",
   "files": [
     "dist",
-    "!*.spec.*"
+    "!*.spec.*",
+    "!*.test.*"
   ],
   "exports": {
     ".": {
@@ -20,8 +21,8 @@
     }
   },
   "keywords": [
-    "svelte",
-    "pagination"
+    "pagination",
+    "svelte"
   ],
   "repository": {
     "type": "git",
