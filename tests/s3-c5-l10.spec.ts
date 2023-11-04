@@ -28,7 +28,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/5')
+  await page.goto('/5')
 
   await page.getByPlaceholder('Side Size').fill('3')
   await page.getByPlaceholder('Center Size').fill('5')
@@ -60,7 +60,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/10')
+  await page.goto('/10')
 
   await page.getByPlaceholder('Side Size').fill('3')
   await page.getByPlaceholder('Center Size').fill('5')
@@ -104,7 +104,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   ).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/15')
+  await page.goto('/15')
 
   await page.getByPlaceholder('Side Size').fill('3')
   await page.getByPlaceholder('Center Size').fill('5')
@@ -148,7 +148,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   ).not.toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/20')
+  await page.goto('/20')
 
   await page.getByPlaceholder('Side Size').fill('3')
   await page.getByPlaceholder('Center Size').fill('5')

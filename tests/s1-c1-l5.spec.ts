@@ -20,7 +20,7 @@ test('side:1 center:1 last:5', async ({ page }) => {
   await expect(page.getByRole('link', { name: '5', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/2')
+  await page.goto('/2')
 
   await page.getByPlaceholder('Side Size').fill('1')
   await page.getByPlaceholder('Center Size').fill('1')
@@ -38,7 +38,7 @@ test('side:1 center:1 last:5', async ({ page }) => {
   await expect(page.getByRole('link', { name: '5', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
-  await page.goto('/svelte-pagination/5')
+  await page.goto('/5')
 
   await page.getByPlaceholder('Side Size').fill('1')
   await page.getByPlaceholder('Center Size').fill('1')
