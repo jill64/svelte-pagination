@@ -8,13 +8,13 @@
 
 ## [Demo](https://stackblitz.com/edit/jill64-svelte-pagination?file=src%2Froutes%2FDemo.svelte)
 
-## Install
+<!----- END GHOST DOCS HEADER ----->
 
-```sh
+## Installation
+
+```bash
 npm i @jill64/svelte-pagination
 ```
-
-<!----- END GHOST DOCS HEADER ----->
 
 ## Quick Example
 
