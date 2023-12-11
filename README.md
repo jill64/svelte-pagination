@@ -10,6 +10,12 @@
 
 <!----- END GHOST DOCS HEADER ----->
 
+## Installation
+
+```bash
+npm i @jill64/svelte-pagination
+```
+
 ## Quick Example
 
 ```svelte
