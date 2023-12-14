@@ -21,14 +21,34 @@ npm i @jill64/svelte-pagination
 ```svelte
 <!-- /src/route/[page=int]/+page.svelte -->
 <script>
-  import { Paginate } from '@jill64/svelte-pagination'
+  import { PaginateItems } from '@jill64/svelte-pagination'
 
   export let data
 
   $: ({ lastPage } = data)
 </script>
 
-<Paginate {lastPage} slug="[page=int]" />
+<div>
+  <PaginateItems {lastPage} slug="[page=int]" />
+</div>
+
+<style>
+  div {
+    /* Your Navigation Box Style */
+  }
+  div :global(.paginate-page-link) {
+    /* Page Link Style */
+  }
+  div :global(.paginate-navigation) {
+    /* Navigation Link Style */
+  }
+  div :global(.paginate-rest-indicator) {
+    /* Rest Indicator (...) Style */
+  }
+  div :global(.paginate-current-page) {
+    /* Current Page Indicator Style */
+  }
+</style>
 ```
 
 ## Key Feature
@@ -36,6 +56,19 @@ npm i @jill64/svelte-pagination
 This component uses SvelteKit route parameters for page management.  
 This enables SvelteKit features like preloading and prefetching when out of the box.  
 Therefore, it is necessary to pass the ID of the route parameter that manages the number of pages to the `Paginate` component as the `slug` property.
+
+## Keyboard Navigation
+
+By default, the `PaginateItems` component is keyboard navigable.
+
+| key     | action        |
+| ------- | ------------- |
+| `→`     | Next Page     |
+| `⌘ + →` | Last Page     |
+| `←`     | Previous Page |
+| `⌘ + ←` | First Page    |
+
+This behavior can be disabled by passing `disableKeyboardNavigation`prop.
 
 ## Optional Props
 
@@ -45,6 +78,11 @@ Therefore, it is necessary to pass the ID of the route parameter that manages th
 | `centerSize`    | `3`           | Number of pages from current page   |
 | `previousLabel` | `＜ Previous` | Previous button label               |
 | `nextLabel`     | `Next ＞`     | Next button label                   |
+| `firstLabel`    | `＜＜`        | First button label                  |
+| `lastLabel`     | `＞＞`        | Last button label                   |
+
+> [!NOTE]
+> You can always hide that label by setting the value of the label prop to Falsy.
 
 ## Calculate Last Page
 
@@ -53,28 +91,53 @@ You can also use the included utility functions to calculate the last page.
 ```svelte
 <!-- /src/route/[page=int]/+page.svelte -->
 <script>
-  import { Paginate, calcLastPage } from '@jill64/svelte-pagination'
+  import { PaginateItems, calcLastPage } from '@jill64/svelte-pagination'
 
   export let data
 
   $: ({ totalCount } = data)
 </script>
 
-<Paginate
-  lastPage={calcLastPage({
-    total: totalCount
-    per: 30 // Count per page
-  })}
-  slug="[page=int]"
-/>
+<div>
+  <PaginateItems
+    lastPage={calcLastPage({
+      total: totalCount
+      per: 30 // Count per page
+    })}
+    slug="[page=int]"
+  />
+</div>
 ```
 
-## Styling
+## Prepared Page Param Matcher
 
-| class                      | description            |
-| -------------------------- | ---------------------- |
-| `.paginate-container`      | Container Area         |
-| `.paginate-page-link`      | Page Link              |
-| `.paginate-navigation`     | Navigation Link        |
-| `.paginate-rest-indicator` | Rest Indicator (...)   |
-| `.paginate-current-page`   | Current Page Indicator |
+Integer parameter matcher (commonly used for pagination) is available.
+
+```js
+// /src/params/int.js
+export { int as match } from '@jill64/svelte-pagination'
+```
+
+## Migrate from v1
+
+In v2, container elements are now user-managed.  
+Instead of `<Paginate>`, you must use `<PaginateItems>` and wrap it with any element.  
+This allows for more fine-grained styling and manipulation of container elements.
+
+- The `.paginate-container` class is no longer used.
+
+```diff
+<script>
+-  import { Paginate } from '@jill64/svelte-pagination'
++  import { PaginateItems } from '@jill64/svelte-pagination'
+
+  export let data
+
+  $: ({ lastPage } = data)
+</script>
+
++ <div>
+-  <Paginate {lastPage} slug="[page=int]" />
++  <PaginateItems {lastPage} slug="[page=int]" />
++ </div>
+```
