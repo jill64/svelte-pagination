@@ -1,11 +1,11 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import { page } from '$app/stores'
-  import { attempt } from '@jill64/attempt'
-  import { clamp } from './utils/clamp.js'
   import Navigation from './Navigation.svelte'
   import PageLink from './PageLink.svelte'
   import RestIndicator from './RestIndicator.svelte'
+  import { clamp } from './utils/clamp.js'
+  import { convertInt } from './utils/convertInt.js'
   import { natural } from './utils/natural.js'
 
   export let lastPage: number
@@ -18,7 +18,7 @@
 
   $: routeId = $page.route.id
   $: key = slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
-  $: current = attempt(() => parseInt($page.params[key]), 1)
+  $: current = convertInt($page.params[key], 1)
 
   $: last = Math.ceil(clamp(lastPage, 1, Infinity))
   $: side = Math.ceil(clamp(sideSize, 1, last))
