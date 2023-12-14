@@ -1,1 +1,1 @@
-export const match = (x) => /^\d+$/.test(x)
+export { int as match } from '$lib'

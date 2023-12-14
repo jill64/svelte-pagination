@@ -7,7 +7,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await page.getByPlaceholder('Center Size').fill('5')
   await page.getByPlaceholder('Last Page').fill('20')
 
-  await expect(page.locator('span').filter({ hasText: '1' })).toBeVisible()
+  await expect(
+    page.locator('span.paginate-current-page').filter({ hasText: '1' })
+  ).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
   await expect(
@@ -39,7 +41,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '4', exact: true })).toBeVisible()
-  await expect(page.locator('span').filter({ hasText: '5' })).toBeVisible()
+  await expect(
+    page.locator('span.paginate-current-page').filter({ hasText: '5' })
+  ).toBeVisible()
   await expect(page.getByRole('link', { name: '6', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '7', exact: true })).toBeVisible()
   await expect(
@@ -79,7 +83,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   ).not.toBeVisible()
   await expect(page.getByRole('link', { name: '8', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '9', exact: true })).toBeVisible()
-  await expect(page.locator('span').filter({ hasText: '10' })).toBeVisible()
+  await expect(
+    page.locator('span.paginate-current-page').filter({ hasText: '10' })
+  ).toBeVisible()
   await expect(
     page.getByRole('link', { name: '11', exact: true })
   ).toBeVisible()
@@ -127,7 +133,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '14', exact: true })
   ).toBeVisible()
-  await expect(page.locator('span').filter({ hasText: '15' })).toBeVisible()
+  await expect(
+    page.locator('span.paginate-current-page').filter({ hasText: '15' })
+  ).toBeVisible()
   await expect(
     page.getByRole('link', { name: '16', exact: true })
   ).toBeVisible()
@@ -171,7 +179,9 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '19', exact: true })
   ).toBeVisible()
-  await expect(page.locator('span').filter({ hasText: '20' })).toBeVisible()
+  await expect(
+    page.locator('span.paginate-current-page').filter({ hasText: '20' })
+  ).toBeVisible()
   await expect(
     page.getByRole('link', { name: '21', exact: true })
   ).not.toBeVisible()

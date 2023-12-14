@@ -13,3 +13,9 @@
 <a href={makeHref(page)} class="paginate-navigation" {hidden}>
   {label}
 </a>
+
+<style>
+  a {
+    white-space: nowrap;
+  }
+</style>

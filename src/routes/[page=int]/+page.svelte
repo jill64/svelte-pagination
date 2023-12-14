@@ -1,50 +1,142 @@
 <script lang="ts">
-  import { Paginate } from '$lib/index.js'
+  import { PaginateItems } from '$lib/index.js'
+  import { HighlightSvelte } from '@jill64/npm-demo-layout/highlight'
+  import { Decimal } from '@jill64/svelte-input'
+  import { code } from './code'
 
   let lastPage = 10
   let centerSize = 3
   let sideSize = 2
 </script>
 
-<div>
-  Last Page
-  <input type="number" placeholder="Last Page" bind:value={lastPage} />
-  Center Size
-  <input type="number" placeholder="Center Size" bind:value={centerSize} />
-  Side Size
-  <input type="number" placeholder="Side Size" bind:value={sideSize} />
+<aside>
+  <div class="form">
+    <span>Last Page</span>
+    <fieldset>
+      <Decimal placeholder="Last Page" bind:value={lastPage} />
+    </fieldset>
+    <span>Center Size</span>
+    <fieldset>
+      <Decimal placeholder="Center Size" bind:value={centerSize} />
+    </fieldset>
+    <span>Side Size</span>
+    <fieldset>
+      <Decimal placeholder="Side Size" bind:value={sideSize} />
+    </fieldset>
+  </div>
+  <section>
+    <h2>Keyboard Navigation</h2>
+    <dl>
+      <dt>→</dt>
+      <dd>Goto next page</dd>
+      <dt>⌘ + →</dt>
+      <dd>Jump to last page</dd>
+      <dt>←</dt>
+      <dd>Goto previous page</dd>
+      <dt>⌘ + ←</dt>
+      <dd>Jump to first page</dd>
+    </dl>
+  </section>
+</aside>
+<nav>
+  <PaginateItems {lastPage} {centerSize} {sideSize} slug="[page=int]" />
+</nav>
+<div style:display="flex" style:justify-content="center">
+  <span style:overflow-x="auto" style:font-size="large">
+    <HighlightSvelte
+      code={code({
+        lastPage,
+        centerSize,
+        sideSize
+      })}
+    />
+  </span>
 </div>
-<Paginate {lastPage} {centerSize} {sideSize} slug="[page=int]" />
 
 <style>
-  div {
+  .form {
     display: inline-grid;
-    align-items: center;
     grid-template-columns: auto auto;
+    align-items: center;
+  }
+
+  aside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  }
+  @media (max-width: 600px) {
+    aside {
+      grid-template-columns: auto;
+    }
+  }
+  dl {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    row-gap: 1rem;
+    margin: 2rem;
+  }
+  nav :global(.paginate-current-page) {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  nav :global(a) {
+    text-decoration: none;
+    color: royalblue;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  nav :global(a):hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  nav :global(a):active {
+    background: rgba(0, 0, 0, 0.2);
+  }
+  :global(.dark) nav :global(a):hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  :global(.dark) nav :global(a):active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  fieldset {
+    display: flex;
+    align-items: center;
+    border: none;
     gap: 0.5rem;
   }
-  input {
-    width: 5em;
-    height: 1.5rem;
+  fieldset :global(input) {
+    width: 5rem;
+  }
+  fieldset :global(input),
+  fieldset :global(button) {
     background: inherit;
     color: inherit;
-    border-radius: 0.25rem;
-    border: 1px solid #ccc;
+    padding: 0.75rem;
+    font-size: large;
+    border: 1px solid #ddd;
   }
-  :global(body) {
-    font-family: sans-serif;
-  }
-  :global(a) {
-    color: #0070f3;
-    text-decoration: none;
-  }
-  :global(a:hover) {
-    text-decoration: underline;
-  }
-  @media (prefers-color-scheme: dark) {
-    :global(body) {
-      background-color: #222;
-      color: #eee;
-    }
+
+  :global(.dark) fieldset :global(input),
+  :global(.dark) fieldset :global(button) {
+    border: 1px solid #555;
   }
 </style>

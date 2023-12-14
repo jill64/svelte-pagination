@@ -3,3 +3,9 @@
 </script>
 
 <span class="paginate-rest-indicator" hidden={show ? null : true}> ... </span>
+
+<style>
+  span {
+    white-space: nowrap;
+  }
+</style>
