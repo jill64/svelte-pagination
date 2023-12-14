@@ -1,21 +1,9 @@
-<header>
-  <h1>svelte-pagination</h1>
-  <a href="https://github.com/jill64/svelte-pagination">GitHub</a>
-</header>
-<slot />
+<script lang="ts">
+  import { Layout } from '@jill64/npm-demo-layout'
+  import README from '../../README.md?raw'
+  import packageJson from '../../package.json'
+</script>
 
-<style>
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.5rem;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+<Layout {packageJson} {README}>
+  <slot />
+</Layout>
