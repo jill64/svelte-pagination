@@ -28,9 +28,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '20', exact: true })
   ).toBeVisible()
-  await expect(
-    page.getByRole('link', { name: 'Next' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
   await page.goto('/5')
 
@@ -38,9 +36,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await page.getByPlaceholder('Center Size').fill('5')
   await page.getByPlaceholder('Last Page').fill('20')
 
-  await expect(
-    page.getByRole('link', { name: 'Previous' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
@@ -66,9 +62,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '20', exact: true })
   ).toBeVisible()
-  await expect(
-    page.getByRole('link', { name: 'Next' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
   await page.goto('/10')
 
@@ -76,9 +70,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await page.getByPlaceholder('Center Size').fill('5')
   await page.getByPlaceholder('Last Page').fill('20')
 
-  await expect(
-    page.getByRole('link', { name: 'Previous' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
@@ -116,9 +108,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '20', exact: true })
   ).toBeVisible()
-  await expect(
-    page.getByRole('link', { name: 'Next' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
   await page.goto('/15')
 
@@ -126,9 +116,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await page.getByPlaceholder('Center Size').fill('5')
   await page.getByPlaceholder('Last Page').fill('20')
 
-  await expect(
-    page.getByRole('link', { name: 'Previous' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
@@ -166,9 +154,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await expect(
     page.getByRole('link', { name: '21', exact: true })
   ).not.toBeVisible()
-  await expect(
-    page.getByRole('link', { name: 'Next' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Next' })).toBeVisible()
 
   await page.goto('/20')
 
@@ -176,9 +162,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
   await page.getByPlaceholder('Center Size').fill('5')
   await page.getByPlaceholder('Last Page').fill('20')
 
-  await expect(
-    page.getByRole('link', { name: 'Previous' })
-  ).toBeVisible()
+  await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
   await expect(page.getByRole('link', { name: '3', exact: true })).toBeVisible()
