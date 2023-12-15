@@ -44,7 +44,7 @@
     "package": "svelte-kit sync && npx @sveltejs/package && npx publint",
     "check": "svelte-kit sync && npx svelte-check",
     "format": "npx @jill64/psx",
-    "lint": "npx eslint . && npm run check",
+    "lint": "npm run check && npx eslint .",
     "test": "playwright test"
   },
   "peerDependencies": {
