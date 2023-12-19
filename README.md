@@ -141,3 +141,11 @@ This allows for more fine-grained styling and manipulation of container elements
 +  <PaginateItems {lastPage} slug="[page=int]" />
 + </div>
 ```
+
+<!----- BEGIN GHOST DOCS FOOTER ----->
+
+## License
+
+MIT
+
+<!----- END GHOST DOCS FOOTER ----->
