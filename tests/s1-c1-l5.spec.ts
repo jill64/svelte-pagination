@@ -3,9 +3,21 @@ import { expect, test } from '@playwright/test'
 test('side:1 center:1 last:5', async ({ page }) => {
   await page.goto('/1')
 
+  await expect(
+    page.getByRole('heading', { name: 'Keyboard Navigation' })
+  ).toBeVisible()
+
+  await expect(page.getByTestId('hydrated')).toBeAttached()
+  await page.waitForTimeout(1000)
+
   await page.getByPlaceholder('Side Size').fill('1')
+  await page.waitForTimeout(1000)
+
   await page.getByPlaceholder('Center Size').fill('1')
+  await page.waitForTimeout(1000)
+
   await page.getByPlaceholder('Last Page').fill('5')
+  await page.waitForTimeout(1000)
 
   await expect(
     page.locator('span.paginate-current-page').filter({ hasText: '1' })

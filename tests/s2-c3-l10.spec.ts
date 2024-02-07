@@ -4,6 +4,12 @@ test('side:2 center:3 last:10 (Default)', async ({ page }) => {
   await page.goto('/1')
 
   await expect(
+    page.getByRole('heading', { name: 'Keyboard Navigation' })
+  ).toBeVisible()
+
+  await expect(page.getByTestId('hydrated')).toBeAttached()
+
+  await expect(
     page.locator('span.paginate-current-page').filter({ hasText: '1' })
   ).toBeVisible()
   await expect(page.getByRole('link', { name: '2', exact: true })).toBeVisible()
