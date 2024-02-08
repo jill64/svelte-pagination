@@ -12,7 +12,7 @@ test('side:3 center:5 last:20', async ({ page }) => {
 
   await page.getByPlaceholder('Side Size').fill('3')
   await page.waitForTimeout(1000)
-  
+
   await page.getByPlaceholder('Center Size').fill('5')
   await page.waitForTimeout(1000)
 
