@@ -150,6 +150,6 @@ This allows for more fine-grained styling and manipulation of container elements
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 <!----- END GHOST DOCS FOOTER ----->
