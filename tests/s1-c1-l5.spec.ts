@@ -12,10 +12,8 @@ test('side:1 center:1 last:5', async ({ page }) => {
 
   await page.getByPlaceholder('Side Size').fill('1')
   await page.waitForTimeout(1000)
-
   await page.getByPlaceholder('Center Size').fill('1')
   await page.waitForTimeout(1000)
-
   await page.getByPlaceholder('Last Page').fill('5')
   await page.waitForTimeout(1000)
 
@@ -36,9 +34,19 @@ test('side:1 center:1 last:5', async ({ page }) => {
 
   await page.goto('/2')
 
+  await expect(
+    page.getByRole('heading', { name: 'Keyboard Navigation' })
+  ).toBeVisible()
+
+  await expect(page.getByTestId('hydrated')).toBeAttached()
+  await page.waitForTimeout(1000)
+
   await page.getByPlaceholder('Side Size').fill('1')
+  await page.waitForTimeout(1000)
   await page.getByPlaceholder('Center Size').fill('1')
+  await page.waitForTimeout(1000)
   await page.getByPlaceholder('Last Page').fill('5')
+  await page.waitForTimeout(1000)
 
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
@@ -56,9 +64,19 @@ test('side:1 center:1 last:5', async ({ page }) => {
 
   await page.goto('/5')
 
+  await expect(
+    page.getByRole('heading', { name: 'Keyboard Navigation' })
+  ).toBeVisible()
+
+  await expect(page.getByTestId('hydrated')).toBeAttached()
+  await page.waitForTimeout(1000)
+
   await page.getByPlaceholder('Side Size').fill('1')
+  await page.waitForTimeout(1000)
   await page.getByPlaceholder('Center Size').fill('1')
+  await page.waitForTimeout(1000)
   await page.getByPlaceholder('Last Page').fill('5')
+  await page.waitForTimeout(1000)
 
   await expect(page.getByRole('link', { name: 'Previous' })).toBeVisible()
   await expect(page.getByRole('link', { name: '1', exact: true })).toBeVisible()
