@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-pagination",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "type": "module",
   "description": "📖 Pagination component for Svelte",
   "main": "dist/index.js",
