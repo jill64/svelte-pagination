@@ -7,7 +7,7 @@
   "license": "MIT",
   "author": {
     "name": "jill64",
-    "email": "intents.turrets0h@icloud.com",
+    "email": "contact@jill64.dev",
     "url": "https://github.com/jill64",
     "image": "https://avatars.githubusercontent.com/u/143883742?v=4"
   },
@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/9197cf6a3aac425f45a7b30488996b735c17cc6585526442e462713ff6dd96f3/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/46c019aa6063b84cd8007cee4c12f4712fa4452c2d9afd4990213bcfbfe58266/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -61,7 +61,7 @@
     "@jill64/universal-sanitizer": "1.2.8",
     "@playwright/test": "1.43.1",
     "@sveltejs/adapter-cloudflare": "4.4.0",
-    "@sveltejs/kit": "2.5.6",
+    "@sveltejs/kit": "2.5.7",
     "svelte": "4.2.15",
     "typescript": "5.4.5",
     "vite": "5.2.10",
