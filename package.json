@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/d302a0ef8bab9a2e0543c91d9230deadf085aedbe19ead3f08df024d1c9fd641/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/7ac242a5b8a9d799263243fcd7b065d558b05c74676b6dd02275d07624cc8d39/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
