@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/10542b5d415d54a16d0555d4613693ee8ac9f738c08547f3bdbde5a4791ca09d/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/cfb97d6c774815296fbf075cf12d0aec1466d478f60b8fe0b1beb7043094e1b1/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -52,7 +52,7 @@
     "svelte": "^4.0.0"
   },
   "devDependencies": {
-    "@jill64/eslint-config-svelte": "1.3.3",
+    "@jill64/eslint-config-svelte": "1.3.4",
     "@jill64/npm-demo-layout": "1.0.237",
     "@jill64/playwright-config": "2.4.0",
     "@jill64/prettier-config": "1.0.0",
