@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/1d74166331c345bf14bd867d09a7c1e9cc84edd65456c9cef0803a05e35325bb/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/2374dd38a67c926f6e84485b2cbc2ce4c626ef26ff585abe3397c826f4c8432f/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -62,7 +62,7 @@
     "@playwright/test": "1.46.1",
     "@sveltejs/adapter-cloudflare": "4.7.2",
     "@sveltejs/kit": "2.5.24",
-    "svelte": "4.2.18",
+    "svelte": "4.2.19",
     "typescript": "5.5.4",
     "vite": "5.4.2",
     "@sveltejs/vite-plugin-svelte": "3.1.2"
