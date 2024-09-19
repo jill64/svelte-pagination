@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-pagination",
-  "version": "2.1.21",
+  "version": "2.1.22",
   "type": "module",
   "description": "📖 Pagination component for Svelte",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/100a28bff79dfd82605fb81f2f665a58586e2563f14bc29ab895cee28bb31bde/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/2395e0224d79253aff3b3cf418b89b18646bcaf99c3580524f4794a52c6756af/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
