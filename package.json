@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/d313e4f94a9c9bf679350cf1a0cfc0ed5918dd0a36cc4d696fc25363b3264989/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/0d3c263e329b3dc5f0b8d666b412ad2d602a0bfb0c87bfb8eb9927c140cfe156/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -64,7 +64,7 @@
     "@sveltejs/kit": "2.5.28",
     "svelte": "4.2.19",
     "typescript": "5.6.2",
-    "vite": "5.4.6",
+    "vite": "5.4.7",
     "@sveltejs/vite-plugin-svelte": "3.1.2"
   },
   "prettier": "@jill64/prettier-config"
