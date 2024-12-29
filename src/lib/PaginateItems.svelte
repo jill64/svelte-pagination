@@ -10,7 +10,11 @@
   import { natural } from './utils/natural.js'
 
   export let lastPage: number
-  export let slug: `[[${string}]]` | `[${string}]` | `[${string}=${string}]` | `[[${string}=${string}]]`
+  export let slug:
+    | `[[${string}]]`
+    | `[${string}]`
+    | `[${string}=${string}]`
+    | `[[${string}=${string}]]`
   export let sideSize = 2
   export let centerSize = 3
   export let previousLabel: string | null = '＜ Previous'
@@ -20,9 +24,9 @@
   export let disableKeyboardNavigation = false
 
   $: routeId = $page.route.id
-  $: key = slug.startsWith('[[') 
-      ? slug.slice(2, slug.includes('=') ? slug.indexOf('=') : -2) 
-      : slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
+  $: key = slug.startsWith('[[')
+    ? slug.slice(2, slug.includes('=') ? slug.indexOf('=') : -2)
+    : slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
   $: current = convertInt($page.params[key], 1)
 
   $: last = Math.ceil(clamp(lastPage, 1, Infinity))
