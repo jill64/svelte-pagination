@@ -1,6 +1,6 @@
 {
   "name": "@jill64/svelte-pagination",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "type": "module",
   "description": "📖 Pagination component for Svelte",
   "main": "dist/index.js",
@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/bf862668708ceb868a0254598d187eb9dbb5f95cfda84d3472af607f5c349959/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/161a125378953e76d378de211c1dc3a318fcc5ef587be6e2be8e4f7baa6a0bf0/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -43,13 +43,13 @@
     "prepack": "npm run build",
     "package": "svelte-kit sync && npx @sveltejs/package && npx publint",
     "check": "svelte-kit sync && npx svelte-check",
-    "format": "npx @jill64/psx",
+    "format": "npx psvx",
     "lint": "npm run check && npx eslint .",
     "test": "playwright test"
   },
   "peerDependencies": {
     "@sveltejs/kit": "^2.0.0",
-    "svelte": "^4.0.0"
+    "svelte": "^5.0.0"
   },
   "devDependencies": {
     "@jill64/eslint-config-svelte": "2.0.1",
@@ -57,15 +57,15 @@
     "@jill64/playwright-config": "2.4.2",
     "@jill64/prettier-config": "1.0.0",
     "@jill64/sentry-sveltekit-cloudflare": "2.0.1",
-    "@jill64/svelte-input": "1.6.36",
+    "@jill64/svelte-input": "2.0.0",
     "@jill64/universal-sanitizer": "1.3.6",
     "@playwright/test": "1.49.1",
     "@sveltejs/adapter-cloudflare": "5.0.0",
     "@sveltejs/kit": "2.15.1",
-    "svelte": "4.2.19",
-    "typescript": "5.6.2",
-    "vite": "5.4.11",
-    "@sveltejs/vite-plugin-svelte": "3.1.2"
+    "svelte": "5.16.0",
+    "typescript": "5.7.2",
+    "vite": "6.0.6",
+    "@sveltejs/vite-plugin-svelte": "5.0.3"
   },
   "prettier": "@jill64/prettier-config"
 }

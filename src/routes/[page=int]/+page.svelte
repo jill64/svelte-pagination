@@ -4,9 +4,9 @@
   import { Decimal } from '@jill64/svelte-input'
   import { code } from './code'
 
-  let lastPage = 10
-  let centerSize = 3
-  let sideSize = 2
+  let lastPage = $state(10)
+  let centerSize = $state(3)
+  let sideSize = $state(2)
 </script>
 
 <aside>
