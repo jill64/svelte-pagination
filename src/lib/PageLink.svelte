@@ -1,12 +1,19 @@
 <script lang="ts">
   import { inRange } from './utils/inRange.js'
 
-  export let makeHref: (page: number) => string
-  export let show: boolean
-  export let page: number
-  export let last: number
+  let {
+    makeHref,
+    show,
+    page,
+    last
+  }: {
+    makeHref: (page: number) => string
+    show: boolean
+    page: number
+    last: number
+  } = $props()
 
-  $: hidden = show ? !inRange(page, 1, last + 1) : true
+  let hidden = $derived(show ? !inRange(page, 1, last + 1) : true)
 </script>
 
 <a href={makeHref(page)} class="paginate-page-link" {hidden}>

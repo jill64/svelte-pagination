@@ -1,7 +1,7 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
   import { base } from '$app/paths'
-  import { page } from '$app/stores'
+  import { page } from '$app/state'
   import Navigation from './Navigation.svelte'
   import PageLink from './PageLink.svelte'
   import RestIndicator from './RestIndicator.svelte'
@@ -9,40 +9,56 @@
   import { convertInt } from './utils/convertInt'
   import { natural } from './utils/natural.js'
 
-  export let lastPage: number
-  export let slug:
-    | `[[${string}]]`
-    | `[${string}]`
-    | `[${string}=${string}]`
-    | `[[${string}=${string}]]`
-  export let sideSize = 2
-  export let centerSize = 3
-  export let previousLabel: string | null = '＜ Previous'
-  export let firstLabel: string | null = '＜＜'
-  export let nextLabel: string | null = 'Next ＞'
-  export let lastLabel: string | null = '＞＞'
-  export let disableKeyboardNavigation = false
+  let {
+    lastPage,
+    slug,
+    sideSize = 2,
+    centerSize = 3,
+    previousLabel = '＜ Previous',
+    firstLabel = '＜＜',
+    nextLabel = 'Next ＞',
+    lastLabel = '＞＞',
+    disableKeyboardNavigation = false
+  }: {
+    lastPage: number
+    slug:
+      | `[[${string}]]`
+      | `[${string}]`
+      | `[${string}=${string}]`
+      | `[[${string}=${string}]]`
+    sideSize?: number
+    centerSize?: number
+    previousLabel?: string
+    firstLabel?: string
+    nextLabel?: string
+    lastLabel?: string
+    disableKeyboardNavigation?: boolean
+  } = $props()
 
-  $: routeId = $page.route.id
-  $: key = slug.startsWith('[[')
-    ? slug.slice(2, slug.includes('=') ? slug.indexOf('=') : -2)
-    : slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
-  $: current = convertInt($page.params[key], 1)
+  let routeId = $derived(page.route.id)
 
-  $: last = Math.ceil(clamp(lastPage, 1, Infinity))
-  $: side = Math.ceil(clamp(sideSize, 1, last))
-  $: wing = clamp(Math.floor((centerSize - 1) / 2), 0, last)
+  let key = $derived(
+    slug.startsWith('[[')
+      ? slug.slice(2, slug.includes('=') ? slug.indexOf('=') : -2)
+      : slug.slice(1, slug.includes('=') ? slug.indexOf('=') : -1)
+  )
 
-  $: remainLeft = clamp(current - 1, 0, last - 1)
-  $: remainRight = clamp(last - current, 0, last - 1)
+  let current = $derived(convertInt(page.params[key], 1))
 
-  $: baseDepth = base.match(/\//g)?.length ?? 0
-  $: pathArray = $page.url.pathname.split('/')
-  $: replaceIndex = routeId
-    ? routeId.split('/').indexOf(slug) + baseDepth
-    : null
+  let last = $derived(Math.ceil(clamp(lastPage, 1, Infinity)))
+  let side = $derived(Math.ceil(clamp(sideSize, 1, last)))
+  let wing = $derived(clamp(Math.floor((centerSize - 1) / 2), 0, last))
 
-  $: makeHref = (target: number) => {
+  let remainLeft = $derived(clamp(current - 1, 0, last - 1))
+  let remainRight = $derived(clamp(last - current, 0, last - 1))
+
+  let baseDepth = $derived(base.match(/\//g)?.length ?? 0)
+  let pathArray = $derived(page.url.pathname.split('/'))
+  let replaceIndex = $derived(
+    routeId ? routeId.split('/').indexOf(slug) + baseDepth : null
+  )
+
+  const makeHref = (target: number) => {
     if (!replaceIndex) {
       return ''
     }
@@ -53,10 +69,10 @@
       ...pathArray.slice(replaceIndex + 1)
     ].join('/')
 
-    return `${pathname}${$page.url.search}${$page.url.hash}`
+    return `${pathname}${page.url.search}${page.url.hash}`
   }
 
-  $: onKeyPress = (e: KeyboardEvent) => {
+  const onKeyPress = (e: KeyboardEvent) => {
     if (disableKeyboardNavigation || e.repeat) {
       return
     }
