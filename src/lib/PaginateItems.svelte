@@ -58,15 +58,19 @@
     routeId ? routeId.split('/').indexOf(slug) + baseDepth : null
   )
 
+  let groupedRoute = $derived(
+    routeId ? routeId.split('/').filter((x) => x.startsWith('(')).length : 0
+  )
+
   const makeHref = (target: number) => {
     if (!replaceIndex) {
       return ''
     }
 
     const pathname = [
-      ...pathArray.slice(0, replaceIndex),
+      ...pathArray.slice(0, replaceIndex - groupedRoute),
       target.toString(),
-      ...pathArray.slice(replaceIndex + 1)
+      ...pathArray.slice(replaceIndex + 1 - groupedRoute)
     ].join('/')
 
     return `${pathname}${page.url.search}${page.url.hash}`
