@@ -27,8 +27,8 @@ importers:
         specifier: 2.0.0
         version: 2.0.0(svelte@5.19.3)
       '@jill64/universal-sanitizer':
-        specifier: 1.4.0
-        version: 1.4.0
+        specifier: 1.4.1
+        version: 1.4.1
       '@playwright/test':
         specifier: 1.50.0
         version: 1.50.0
@@ -539,6 +539,9 @@ packages:
   '@jill64/universal-sanitizer@1.4.0':
     resolution: {integrity: sha512-H17UAbbD0CdF4QfU/OVFveaub1kdhkFZVlnrR9eUFiyNN/55E3UIRJqn4AMLabLmiT3/ek4yDQNIkGaydK8uDA==}
 
+  '@jill64/universal-sanitizer@1.4.1':
+    resolution: {integrity: sha512-WucGwUX3W3XFi7+vPPGNTAykrmL2XnckM1qgsNvIThOmmJN20GPzzkEhu3ixafaTDnTb4Gf67chC1OJnVAv/+A==}
+
   '@jridgewell/gen-mapping@0.3.5':
     resolution: {integrity: sha512-IzL8ZoEDIBRWEzlCcRhOaCupYyN5gdIK+Q6fbFdPDg6HqX6jpkItn7DFIpW9LQzXG6Df9sA7+OKnq0qlz/GaQg==}
     engines: {node: '>=6.0.0'}
@@ -979,6 +982,9 @@ packages:
 
   dompurify@3.2.3:
     resolution: {integrity: sha512-U1U5Hzc2MO0oW3DF+G9qYN0aT7atAou4AgI0XjWz061nyBPbdxkfdhfy5uMgGn6+oLFCfn44ZGbdDqCzVmlOWA==}
+
+  dompurify@3.2.4:
+    resolution: {integrity: sha512-ysFSFEDVduQpyhzAob/kkuJjf5zWkZD8/A9ywSp1byueyuCfHamrCBa14/Oc2iiB0e51B+NpxSl5gmzn+Ms/mg==}
 
   domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
@@ -2117,6 +2123,12 @@ snapshots:
       dompurify: 3.2.3
       sanitize-html: 2.14.0
 
+  '@jill64/universal-sanitizer@1.4.1':
+    dependencies:
+      '@types/sanitize-html': 2.13.0
+      dompurify: 3.2.4
+      sanitize-html: 2.14.0
+
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
@@ -2554,6 +2566,10 @@ snapshots:
       domelementtype: 2.3.0
 
   dompurify@3.2.3:
+    optionalDependencies:
+      '@types/trusted-types': 2.0.7
+
+  dompurify@3.2.4:
     optionalDependencies:
       '@types/trusted-types': 2.0.7
 
