@@ -31,20 +31,20 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/9a047916b51616d28dfd26e7f91212a4f7d777ef79ef7513635bccaaf51a6398/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/1fb99e5890cf0a06057299b0a8bc9008a815ee98f6b788c49cad92ac414dc083/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build && npm run package",
-    "preview": "npm run build && vite preview",
-    "prepack": "npm run build",
-    "package": "svelte-kit sync && npx @sveltejs/package && npx publint",
-    "check": "svelte-kit sync && npx svelte-check",
-    "format": "npx psvx",
-    "lint": "npm run check && npx eslint .",
+    "build": "vite build && bun run package",
+    "preview": "bun run build && vite preview",
+    "prepack": "bun run build",
+    "package": "svelte-kit sync && bunx @sveltejs/package && bunx publint",
+    "check": "svelte-kit sync && bunx svelte-check",
+    "format": "bunx psvx",
+    "lint": "bun run check && bunx eslint .",
     "test": "playwright test"
   },
   "peerDependencies": {
@@ -52,19 +52,18 @@
     "svelte": "^5.0.0"
   },
   "devDependencies": {
-    "@jill64/eslint-config-svelte": "2.0.6",
+    "@jill64/eslint-config-svelte": "2.2.1",
     "@jill64/npm-demo-layout": "2.0.15",
-    "@jill64/playwright-config": "2.4.2",
+    "@jill64/playwright-config": "3.0.0",
     "@jill64/prettier-config": "1.0.0",
     "@jill64/sentry-sveltekit-cloudflare": "2.0.6",
-    "@jill64/svelte-input": "2.0.0",
-    "@jill64/universal-sanitizer": "1.4.1",
-    "@playwright/test": "1.50.1",
-    "@sveltejs/adapter-cloudflare": "5.0.1",
-    "@sveltejs/kit": "2.17.0",
-    "svelte": "5.19.3",
-    "typescript": "5.7.3",
-    "vite": "6.0.11",
+    "@jill64/svelte-input": "2.0.3",
+    "@playwright/test": "1.51.0",
+    "@sveltejs/adapter-cloudflare": "5.0.3",
+    "@sveltejs/kit": "2.19.0",
+    "svelte": "5.23.0",
+    "typescript": "5.8.2",
+    "vite": "6.2.1",
     "@sveltejs/vite-plugin-svelte": "5.0.3"
   },
   "prettier": "@jill64/prettier-config"
