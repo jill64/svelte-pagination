@@ -119,11 +119,11 @@
     {makeHref}
   />
 {/if}
-{#each natural(side) as n}
+{#each natural(side) as n (n)}
   <PageLink show={remainLeft > n} page={n + 1} {last} {makeHref} />
 {/each}
 <RestIndicator show={side < current - wing - 1} />
-{#each natural(wing) as n}
+{#each natural(wing) as n (n)}
   {@const reverseIndex = wing - n}
   {@const page = current - reverseIndex}
   <PageLink show={page > side} {page} {last} {makeHref} />
@@ -131,14 +131,14 @@
 <span class="paginate-current-page">
   {current}
 </span>
-{#each natural(wing) as n}
+{#each natural(wing) as n (n)}
   {@const page = current + n + 1}
   <PageLink show={page <= last - side} {page} {last} {makeHref} />
 {/each}
 
 <RestIndicator show={current + wing < last - side} />
 
-{#each natural(side) as n}
+{#each natural(side) as n (n)}
   {@const reverseIndex = side - n - 1}
   <PageLink
     show={remainRight > reverseIndex}
