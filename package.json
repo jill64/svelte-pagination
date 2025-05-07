@@ -31,7 +31,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jill64/svelte-pagination.git",
-    "image": "https://opengraph.githubassets.com/c3c4c2d08e364f0a6c48bf093383baed690222ce6faf4dafafb2beebf950c0a3/jill64/svelte-pagination"
+    "image": "https://opengraph.githubassets.com/88cad2dda3499a7ceffed0359e3e29d82b453a3a918119e608a1d45b0244d93f/jill64/svelte-pagination"
   },
   "publishConfig": {
     "access": "public"
@@ -59,7 +59,7 @@
     "@jill64/sentry-sveltekit-cloudflare": "2.0.6",
     "@jill64/svelte-input": "2.0.3",
     "@playwright/test": "1.51.0",
-    "@sveltejs/adapter-cloudflare": "7.0.2",
+    "@sveltejs/adapter-cloudflare": "7.0.3",
     "@sveltejs/kit": "2.20.6",
     "svelte": "5.23.1",
     "typescript": "5.8.2",
